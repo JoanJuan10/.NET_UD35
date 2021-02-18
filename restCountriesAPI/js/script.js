@@ -126,4 +126,24 @@ $(function () {
         });
         e.preventDefault();
     });
+    $("#countriesbylang").click(function (e) {
+        var codigo = prompt("Introduce el codigo de idioma a filtrar");
+        $.ajax({
+            type: "GET",
+            url: "https://restcountries.eu/rest/v2/lang/" + codigo,
+            dataType: "json",
+            headers: {
+                'Accept':'application/json',
+            },
+            contentType: 'application/x-www-form-urlencoded',
+            success: function (response) {
+                console.log(response);
+                alert("Mira la respuesta por Consola");
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+        e.preventDefault();
+    });
 });
