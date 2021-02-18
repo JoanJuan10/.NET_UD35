@@ -226,4 +226,33 @@ $(function () {
         });
         e.preventDefault();
     });
+    $("#countriesbyservice").click(function (e) {
+        var servicio = prompt("Introduce el servicio a usar");
+        var cantidad = prompt("Cuantos campos quieres obtener?");
+        var link = "https://restcountries.eu/rest/v2/" + servicio + "?fields=";
+
+        for (let i = 0; i < cantidad; i++) {
+            var campo = prompt("Introduce el campo a obtener " + (i + 1));
+            if (i + 1 != paises) {
+                link += campo + ";";
+            } 
+        }
+        $.ajax({
+            type: "GET",
+            url: link,
+            dataType: "json",
+            headers: {
+                'Accept':'application/json',
+            },
+            contentType: 'application/x-www-form-urlencoded',
+            success: function (response) {
+                console.log(response);
+                alert("Mira la respuesta por Consola");
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+        e.preventDefault();
+    });
 });
