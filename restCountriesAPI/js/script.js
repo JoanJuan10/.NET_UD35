@@ -17,7 +17,6 @@ $(function () {
             }
         });
         e.preventDefault();
-        
     });
     $("#countrybyname").click(function (e) {
         var pais = prompt("Introduce el pais en ingles");
@@ -38,7 +37,6 @@ $(function () {
             }
         });
         e.preventDefault();
-        
     });
     $("#countrybyname-alltext").click(function (e) {
         var pais = prompt("Introduce el pais en ingles");
@@ -59,7 +57,6 @@ $(function () {
             }
         });
         e.preventDefault();
-        
     });
     $("#countrybyalpha").click(function (e) {
         var codigo = prompt("Introduce el codigo alpha del pais");
@@ -80,6 +77,33 @@ $(function () {
             }
         });
         e.preventDefault();
-        
+    });
+    $("#countriesbyalpha").click(function (e) {
+        var paises = prompt("Cuantos paises quieres buscar?");
+        var link = "https://restcountries.eu/rest/v2/alpha/?codes=";
+
+        for (let i = 0; i < paises; i++) {
+            var codigo = prompt("Introduce el pais " + (i + 1));
+            if (i + 1 != paises) {
+                link += codigo + ";";
+            } 
+        }
+        $.ajax({
+            type: "GET",
+            url: link,
+            dataType: "json",
+            headers: {
+                'Accept':'application/json',
+            },
+            contentType: 'application/x-www-form-urlencoded',
+            success: function (response) {
+                console.log(response);
+                alert("Mira la respuesta por Consola");
+            },
+            error: function (error) {
+                console.log(error);
+            }
+        });
+        e.preventDefault();
     });
 });
