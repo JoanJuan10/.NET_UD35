@@ -13,6 +13,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -33,6 +34,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -53,6 +55,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -73,6 +76,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -101,6 +105,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -121,6 +126,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -141,6 +147,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -161,6 +168,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -181,6 +189,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -201,6 +210,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -221,6 +231,7 @@ $(function () {
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
+                alert("Ha ocurrido un error (Mira la consola)");
                 console.log(error);
             }
         });
@@ -247,6 +258,7 @@ $(function () {
             contentType: 'application/x-www-form-urlencoded',
             success: function (response) {
                 console.log(response);
+                alert("Ha ocurrido un error (Mira la consola)");
                 alert("Mira la respuesta por Consola");
             },
             error: function (error) {
